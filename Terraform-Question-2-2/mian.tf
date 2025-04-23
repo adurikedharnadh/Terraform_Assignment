@@ -3,7 +3,6 @@ provider "aws" {
   alias  = "main"
 }
 
-# RoleA - Admin excluding IAM
 resource "aws_iam_role" "roleA" {
   name = "roleA"
 
@@ -44,7 +43,6 @@ resource "aws_iam_role_policy_attachment" "attach_admin_without_iam" {
   policy_arn = aws_iam_policy.admin_without_iam.arn
 }
 
-# RoleB - Can assume roleC in another account
 resource "aws_iam_role" "roleB" {
   name = "roleB"
 
@@ -53,7 +51,7 @@ resource "aws_iam_role" "roleB" {
     Statement = [{
       Effect = "Allow"
       Principal = {
-        Service = "ec2.amazonaws.com"  # Example service principal
+        Service = "ec2.amazonaws.com" 
       }
       Action = "sts:AssumeRole"
     }]
