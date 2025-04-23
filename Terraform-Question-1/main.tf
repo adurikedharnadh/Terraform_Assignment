@@ -1,5 +1,5 @@
 module "ec2_instances" {
-  #source = "./terraform-ec2-module"
+
   source = "./modules/ec2_create"
 
   ec2_instances = {
