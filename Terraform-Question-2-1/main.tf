@@ -8,7 +8,7 @@ module "group1" {
   source           = "./modules/iam_creation"
   group_name       = "group1"
   user_names       = ["engine", "ci"]
-  policy_arns      = ["arn:aws:iam::aws:policy/PowerUserAccess"] # or a custom limited policy
+  policy_arns      = ["arn:aws:iam::aws:policy/PowerUserAccess"]
 }
 
 module "group2" {
