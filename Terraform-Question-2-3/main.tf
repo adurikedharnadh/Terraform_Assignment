@@ -1,7 +1,7 @@
 provider "aws" {
   alias  = "account1111"
-  region = "ap-south-1" # Change as needed
-  profile = "222634405778" # Or use access_key/secret_key
+  region = "ap-south-1" 
+  profile = "222634405778"
 }
 
 resource "aws_iam_role" "roleC" {
