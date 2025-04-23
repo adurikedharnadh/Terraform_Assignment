@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "this" {
+resource "aws_instance" "create" {
   for_each = var.ec2_instances
 
   ami = data.aws_ssm_parameter.ubuntu_22_04.value
